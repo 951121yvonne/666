@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>互動式問答遊戲</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="libraries/p5.min.js"></script>
+    <script src="libraries/p5.sound.min.js"></script>
+</head>
+<body>
+    <div id="game-container"></div>
+
+    <div id="question-overlay" class="hidden">
+        <h2 id="question-source"></h2>
+        <p id="question-text"></p>
+        <input type="text" id="answer-input" placeholder="請輸入答案">
+        <button id="submit-answer">提交答案</button>
+        <div id="hint-area"></div>
+        <p class="hint-key-prompt">不知道答案？對話框開啟時，按 **K 鍵** 請求提示。</p>
+    </div>
+    
+    <script src="sketch.js"></script>
+</body>
+</html>

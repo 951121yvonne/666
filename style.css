@@ -1,0 +1,83 @@
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #333; /* 設置背景色 */
+    font-family: Arial, sans-serif;
+}
+
+/* 確保畫布居中 */
+#game-container {
+    border: 2px solid #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+/* 問題彈出視窗樣式 */
+#question-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+}
+
+#question-overlay.hidden {
+    display: none;
+}
+
+#question-source {
+    color: #ffd700; /* 金色，突出提問者 */
+    margin-bottom: 5px;
+}
+
+#answer-input {
+    padding: 10px;
+    margin: 15px 0;
+    width: 90%;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+}
+
+#submit-answer {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#submit-answer:hover {
+    background-color: #45a049;
+}
+
+#hint-area {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: #ffeb3b; /* 提示文字顏色 */
+}
+
+.hint-key-prompt {
+    font-size: 12px;
+    color: #aaa;
+    margin-top: 10px;
+}
